@@ -1,0 +1,21 @@
+.cta-block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  &__title {
+    color: $white;
+    font-weight: 300;
+    margin: 0 0 2rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      margin: 0;
+    }
+  }
+}

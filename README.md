@@ -37,5 +37,21 @@ protected function init()
 
 #### Importing the main.scss file
 
+This is a good way of pulling the css into your own build chain, as it results in only one css file and allows you to override any variables used to fit your project
+
+```scss
+// Your main.scss file in your project
+@import 'variables'; // Import your own variables first to override handyblocks variables
+
+@import '../vendor/scott1702/silverstripe-handyblocks/client/src/main';
+```
+
 
 #### Importing each block's scss file independently
+
+```scss
+// Your main.scss file in your project
+@import 'variables'; // Your own variables/mixins will have to match the values used in each scss file
+
+@import '../vendor/scott1702/silverstripe-handyblocks/client/src/blocks/cta-block';
+```

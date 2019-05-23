@@ -11,5 +11,10 @@
             "name": "Scott Hutchinson",
             "email": "scott@silverstripe.com"
         }
-    ]
+    ],
+    "extra": {
+      "expose": [
+        "client/dist"
+      ]
+    }
 }

@@ -31,7 +31,8 @@ This is the recommended approach if you want get something up and running quick:
 
 protected function init()
 {
-    Requirements::css('scott1702/silverstripe-handyblocks:client/dist/bundle.css');
+    parent::init();
+    \SilverStripe\View\Requirements::css('scott1702/silverstripe-handyblocks:client/dist/main.css');
 }
 ```
 

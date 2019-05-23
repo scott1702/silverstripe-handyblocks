@@ -37,6 +37,11 @@ class CallToActionBlock extends BaseElement
      */
     private static $description = 'CTA Block';
 
+    /**
+     * Use custom element holder to enable variants
+     */
+    private static $controller_template = 'HandyElementHolder';
+
     private static $db = [
         'LinkContent' => 'Varchar(255)',
     ];
@@ -72,7 +77,7 @@ class CallToActionBlock extends BaseElement
      */
     public function getType(): string
     {
-        return static::$singular_name;
+        return $this->i18n_singular_name();
     }
 
     public function getCMSValidator(): Validator

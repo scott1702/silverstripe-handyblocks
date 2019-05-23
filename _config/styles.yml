@@ -1,0 +1,5 @@
+SilverStripe\HandyBlocks\CallToActionBlock:
+  styles:
+    light-blue: Light blue background
+    blue: Dark blue background
+    dark-grey: Dark grey background

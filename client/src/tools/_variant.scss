@@ -1,0 +1,28 @@
+/**
+ * Provides styles for different wrapping variants of blocks
+ */
+.variant {
+  &--white {
+    background-color: $white;
+  }
+
+  &--grey {
+    background-color: $pale-grey;
+  }
+
+  &--dark-grey {
+    background-color: $river-bed;
+  }
+
+  &--blue {
+    background-color: $dark-blue;
+  }
+
+  &--light-blue {
+    background-color: $blue;
+  }
+
+  &--pink {
+    background-color: $pink;
+  }
+}

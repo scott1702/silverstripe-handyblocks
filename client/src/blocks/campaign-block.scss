@@ -1,0 +1,137 @@
+.campaign-block {
+  display: flex;
+  flex-direction: column;
+
+  &--no-image {
+    display: block;
+    grid-column: 1 / span 12;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      grid-column: 2 / span 10;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-column: 3 / span 8;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+
+    &--right {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__wrap {
+    @include media-breakpoint-up(lg) {
+      flex-basis: 58rem;
+      flex-shrink: 0;
+      padding-left: 4rem;
+
+      .campaign-block--right & {
+        padding-left: 0;
+        padding-right: 4rem;
+      }
+
+      .campaign-block--no-image & {
+        padding: 0;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: var(--font-size-md);
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: var(--color-white);
+    }
+  }
+
+  &__title {
+    font-weight: var(--font-weight-normal);
+    margin-top: 1rem;
+
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: var(--color-white);
+      font-weight: var(--font-weight-semibold);
+    }
+  }
+
+  &__summary {
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: var(--color-white);
+    }
+  }
+
+  &__link {
+    margin: 3rem 0 2.5rem;
+  }
+
+  &__button {
+    border: 0;
+
+    .variant--light-blue & {
+      color: var(--color-blue);
+    }
+
+    .variant--blue & {
+      color: var(--color-theme-color);
+    }
+
+    .variant--pink & {
+      color: var(--color-pink);
+    }
+  }
+
+  &__secondary-link {
+    font-size: var(--font-size-md);
+    font-style: italic;
+    margin: 2.5rem 0;
+
+    a {
+      color: var(--color-pink);
+
+      .variant--light-blue &,
+      .variant--blue &,
+      .variant--pink & {
+        color: var(--color-white);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Separate element for mobile to resolve IE11 issues with <img> elements as flex-items
+  &__mobile-image {
+    margin-bottom: 2.5rem;
+    max-height: 40rem;
+    order: -1;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      background: {
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+      }
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "scott1702/silverstripe-handyblocks",
+    "description": "Provides some useful elemental blocks",
+    "type": "silverstripe-vendormodule",
+    "require": {
+        "dnadesign/silverstripe-elemental": "^4"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Scott Hutchinson",
+            "email": "scott@silverstripe.com"
+        }
+    ]
+}

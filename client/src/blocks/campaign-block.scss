@@ -43,8 +43,7 @@
   }
 
   &__heading {
-    font-size: $font-size-md;
-    margin-bottom: 0;
+    margin: 0 0 1em;
     text-transform: uppercase;
 
     .variant--light-blue &,
@@ -55,14 +54,13 @@
   }
 
   &__title {
-    font-weight: $font-weight-normal;
-    margin-top: 1em;
+    font-weight: $font-weight-bold;
+    margin-top: 0;
 
     .variant--light-blue &,
     .variant--blue &,
     .variant--pink & {
       color: $white;
-      font-weight: $font-weight-semibold;
     }
   }
 
@@ -74,18 +72,29 @@
     }
   }
 
-  &__button {
-    border: 0;
-    border-bottom: 1px solid transparent;
-    float: none;
-    margin-right: 1.5em;
+  &__link {
+    margin: 3em 0 2.5em;
 
-    .variant--light-blue & {
-      background-color: $white;
-      color: $blue;
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: $white;
 
       &:hover {
-        background-color: $pale-grey;
+        color: $white;
+      }
+    }
+  }
+
+  &__button {
+    .variant--light-blue & {
+      background-color: $white;
+      border-color: $white;
+      color: $blue;
+
+      &:hover,
+      &:focus {
+        background: $pale-grey;
         border-bottom-color: $blue;
         color: $blue;
       }
@@ -93,10 +102,12 @@
 
     .variant--blue & {
       background-color: $white;
+      border-color: $white;
       color: $dark-blue;
 
-      &:hover {
-        background-color: $pale-grey;
+      &:hover,
+      &:focus {
+        background: $pale-grey;
         border-bottom-color: $dark-blue;
         color: $dark-blue;
       }
@@ -104,10 +115,12 @@
 
     .variant--pink & {
       background-color: $white;
+      border-color: $white;
       color: $pink;
 
-      &:hover {
-        background-color: $pale-grey;
+      &:hover,
+      &:focus {
+        background: $pale-grey;
         border-bottom-color: $pink;
         color: $pink;
       }
@@ -116,46 +129,46 @@
 
   &__secondary-link {
     color: $pink;
-    float: left;
-    font-size: 1.6em;
-    margin: 1em 0;
+    display: inline-block;
     text-transform: uppercase;
 
     .variant--light-blue &,
     .variant--blue &,
     .variant--pink & {
       color: $white;
-      text-decoration: underline;
+      transition: opacity 0.2s;
 
-      &:hover {
-        border: none;
+      &:hover,
+      &:focus {
         color: $white;
+        border-bottom-color: $white;
       }
-    }
-  }
-
-  // Separate element for mobile to resolve IE11 issues with <img> elements as flex-items
-  &__mobile-image {
-    margin-bottom: 2.5em;
-    max-height: 40em;
-    order: -1;
-
-    @include media-breakpoint-up(lg) {
-      display: none;
     }
   }
 
   &__image {
-    display: none;
+    margin-bottom: 2.5em;
+    max-height: 50em;
+    max-width: 100%;
 
     @include media-breakpoint-up(lg) {
-      background: {
-        position: center;
-        repeat: no-repeat;
-        size: contain;
-      }
-      display: block;
+      margin-bottom: 0;
+      max-height: none;
+      max-width: 50em;
       width: 100%;
+
+      .campaign-block--right & {
+        float: right;
+      }
+    }
+  }
+
+  &__image-wrap {
+    margin-top: 1em;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
     }
   }
 }

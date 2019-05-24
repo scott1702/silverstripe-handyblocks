@@ -56,3 +56,24 @@ This is a good way of pulling the css into your own build chain, as it results i
 
 @import '../vendor/scott1702/silverstripe-handyblocks/client/src/blocks/cta-block';
 ```
+
+## Gotchas
+
+There are a few patterns in this module which may catch you out, so they are listed here for clarity:
+
+### Custom Element holder
+
+All of the blocks in this module user a custom ElementHolder in order to apply different style variants, the template `HandyElementHolder.ss` can be overridden or you can adjust the holder for each block back to the default with yml configuation.
+
+```yaml
+SilverStripe\HandyBlocks\CallToActionBlock:
+  controller_template: 'ElementHolder'
+```
+
+### Container in each template
+
+So that each variant's color stretched all the way to the edge, there is a `<div class="container">` element inside `HandyElementHolder.ss`. This will break styling if there is a secondary container applied at a page level, rather than a block level.
+
+### CSS uses ems
+
+em values in the css expect 1em to equal 10px, because of this a font-size of 10px has been applied to each block.

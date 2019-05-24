@@ -7,7 +7,6 @@ SilverStripe\HandyBlocks\CallToActionBlock:
 SilverStripe\HandyBlocks\CampaignBlock:
   styles:
     white: White background
-    grey: Grey background
     light-blue: Light blue background
     blue: Blue background
     pink: Pink background

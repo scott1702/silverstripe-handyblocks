@@ -15,9 +15,7 @@ $grid-breakpoints: (
   xl: 1200px
 ) !default;
 
-//Font-sizes
-$font-size-md: 1.8rem !default;
-
 // Font weights
 $font-weight-normal: 400 !default;
-$font-weight-semibold: 600;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;

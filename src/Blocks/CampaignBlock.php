@@ -45,8 +45,6 @@ class CampaignBlock extends BaseElement
     private static $icon = 'font-icon-block-banner';
 
     /**
-     * Use custom element holder to enable variants
-     *
      * @var string
      */
     private static $controller_template = 'HandyElementHolder';

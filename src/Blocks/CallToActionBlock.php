@@ -39,17 +39,28 @@ class CallToActionBlock extends BaseElement
 
     /**
      * Use custom element holder to enable variants
+     *
+     * @var string
      */
     private static $controller_template = 'HandyElementHolder';
 
+    /**
+     * @var array
+     */
     private static $db = [
         'LinkContent' => 'Varchar(255)',
     ];
 
+    /**
+     * @var array
+     */
     private static $has_one = [
         'LinkedPage' => SiteTree::class,
     ];
 
+    /**
+     * @return FieldList $fields
+     */
     public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();
@@ -80,6 +91,9 @@ class CallToActionBlock extends BaseElement
         return $this->i18n_singular_name();
     }
 
+    /**
+     * @return RequiredFields
+     */
     public function getCMSValidator(): Validator
     {
         return RequiredFields::create([

@@ -3,7 +3,8 @@
     "description": "Provides some useful elemental blocks",
     "type": "silverstripe-vendormodule",
     "require": {
-        "dnadesign/silverstripe-elemental": "^4"
+        "dnadesign/silverstripe-elemental": "^4",
+        "sheadawson/silverstripe-linkable": "^2"
     },
     "license": "BSD-3-Clause",
     "authors": [

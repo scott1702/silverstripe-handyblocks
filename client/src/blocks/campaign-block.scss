@@ -1,0 +1,162 @@
+.campaign-block {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+
+  &--no-image {
+    display: block;
+    grid-column: 1 / span 12;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      grid-column: 2 / span 10;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-column: 3 / span 8;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+
+    &--right {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__wrap {
+    @include media-breakpoint-up(lg) {
+      flex-basis: 58rem;
+      flex-shrink: 0;
+      max-width: 50%;
+      padding-left: 4rem;
+
+      .campaign-block--right & {
+        padding-left: 0;
+        padding-right: 4rem;
+      }
+
+      .campaign-block--no-image & {
+        padding: 0;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: $font-size-md;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: $white;
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-normal;
+    margin-top: 1rem;
+
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: $white;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  &__summary {
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: $white;
+    }
+  }
+
+  &__button {
+    border: 0;
+    border-bottom: 1px solid transparent;
+    float: none;
+    margin-right: 15px;
+
+    .variant--light-blue & {
+      background-color: $white;
+      color: $blue;
+
+      &:hover {
+        background-color: $pale-grey;
+        border-bottom-color: $blue;
+        color: $blue;
+      }
+    }
+
+    .variant--blue & {
+      background-color: $white;
+      color: $dark-blue;
+
+      &:hover {
+        background-color: $pale-grey;
+        border-bottom-color: $dark-blue;
+        color: $dark-blue;
+      }
+    }
+
+    .variant--pink & {
+      background-color: $white;
+      color: $pink;
+
+      &:hover {
+        background-color: $pale-grey;
+        border-bottom-color: $pink;
+        color: $pink;
+      }
+    }
+  }
+
+  &__secondary-link {
+    color: $pink;
+    float: left;
+    font-size: 16px;
+    margin: 1rem 0;
+    text-transform: uppercase;
+
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: $white;
+      text-decoration: underline;
+
+      &:hover {
+        border: none;
+        color: $white;
+      }
+    }
+  }
+
+  // Separate element for mobile to resolve IE11 issues with <img> elements as flex-items
+  &__mobile-image {
+    margin-bottom: 2.5rem;
+    max-height: 40rem;
+    order: -1;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      background: {
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+      }
+      display: block;
+      width: 100%;
+    }
+  }
+}

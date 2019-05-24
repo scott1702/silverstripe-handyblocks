@@ -1,7 +1,6 @@
 .campaign-block {
   display: flex;
   flex-direction: column;
-  padding: 50px 20px;
 
   &--no-image {
     display: block;
@@ -27,14 +26,14 @@
 
   &__wrap {
     @include media-breakpoint-up(lg) {
-      flex-basis: 58rem;
+      flex-basis: 58em;
       flex-shrink: 0;
       max-width: 50%;
-      padding-left: 4rem;
+      padding-left: 4em;
 
       .campaign-block--right & {
         padding-left: 0;
-        padding-right: 4rem;
+        padding-right: 4em;
       }
 
       .campaign-block--no-image & {
@@ -57,7 +56,7 @@
 
   &__title {
     font-weight: $font-weight-normal;
-    margin-top: 1rem;
+    margin-top: 1em;
 
     .variant--light-blue &,
     .variant--blue &,
@@ -79,7 +78,7 @@
     border: 0;
     border-bottom: 1px solid transparent;
     float: none;
-    margin-right: 15px;
+    margin-right: 1.5em;
 
     .variant--light-blue & {
       background-color: $white;
@@ -118,8 +117,8 @@
   &__secondary-link {
     color: $pink;
     float: left;
-    font-size: 16px;
-    margin: 1rem 0;
+    font-size: 1.6em;
+    margin: 1em 0;
     text-transform: uppercase;
 
     .variant--light-blue &,
@@ -137,8 +136,8 @@
 
   // Separate element for mobile to resolve IE11 issues with <img> elements as flex-items
   &__mobile-image {
-    margin-bottom: 2.5rem;
-    max-height: 40rem;
+    margin-bottom: 2.5em;
+    max-height: 40em;
     order: -1;
 
     @include media-breakpoint-up(lg) {

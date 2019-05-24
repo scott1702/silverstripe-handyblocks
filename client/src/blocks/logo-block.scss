@@ -1,0 +1,55 @@
+.logo-block {
+  &__logos {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__title {
+    margin: 0 0 3em;
+    text-align: center;
+  }
+
+  &__link {
+    margin: 0 4em 4em;
+
+    @include media-breakpoint-up(md) {
+      margin: 0 3em 1.6em;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin: 0 5em 1.6em;
+    }
+  }
+
+  &__image {
+    max-height: 10em;
+
+    /**
+     * We need to apply width styles to only md and down
+     * because unsetting max width produces inconsistent
+     * results in different browsers.
+     */
+    @include media-breakpoint-down(sm) {
+      max-width: 18em;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 16em;
+      width: 100%;
+    }
+  }
+}

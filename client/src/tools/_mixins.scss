@@ -4,3 +4,10 @@
     @content;
   }
 }
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @media (max-width: $min) {
+    @content;
+  }
+}

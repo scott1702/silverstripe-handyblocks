@@ -38,8 +38,6 @@ class CallToActionBlock extends BaseElement
     private static $description = 'CTA Block';
 
     /**
-     * Use custom element holder to enable variants
-     *
      * @var string
      */
     private static $controller_template = 'HandyElementHolder';

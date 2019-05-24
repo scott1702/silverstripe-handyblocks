@@ -4,13 +4,18 @@
     "type": "silverstripe-vendormodule",
     "require": {
         "dnadesign/silverstripe-elemental": "^4",
-        "sheadawson/silverstripe-linkable": "^2"
+        "sheadawson/silverstripe-linkable": "^2",
+        "symbiote/silverstripe-gridfieldextensions": "^3"
     },
     "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Scott Hutchinson",
             "email": "scott@silverstripe.com"
+        },
+        {
+            "name": "Massey Isa'ako",
+            "email": "massey@silverstripe.com"
         }
     ],
     "extra": {

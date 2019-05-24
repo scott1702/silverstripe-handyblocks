@@ -62,6 +62,9 @@ class LogoBlock extends BaseElement
         'Logos',
     ];
 
+    /**
+     * @return FieldList $fields
+     */
     public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();

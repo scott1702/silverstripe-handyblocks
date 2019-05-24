@@ -1,6 +1,7 @@
 .campaign-block {
   display: flex;
   flex-direction: column;
+  padding: 50px 20px;
 
   &--no-image {
     display: block;
@@ -28,6 +29,7 @@
     @include media-breakpoint-up(lg) {
       flex-basis: 58rem;
       flex-shrink: 0;
+      max-width: 50%;
       padding-left: 4rem;
 
       .campaign-block--right & {
@@ -42,26 +44,26 @@
   }
 
   &__heading {
-    font-size: var(--font-size-md);
+    font-size: $font-size-md;
     margin-bottom: 0;
     text-transform: uppercase;
 
     .variant--light-blue &,
     .variant--blue &,
     .variant--pink & {
-      color: var(--color-white);
+      color: $white;
     }
   }
 
   &__title {
-    font-weight: var(--font-weight-normal);
+    font-weight: $font-weight-normal;
     margin-top: 1rem;
 
     .variant--light-blue &,
     .variant--blue &,
     .variant--pink & {
-      color: var(--color-white);
-      font-weight: var(--font-weight-semibold);
+      color: $white;
+      font-weight: $font-weight-semibold;
     }
   }
 
@@ -69,43 +71,66 @@
     .variant--light-blue &,
     .variant--blue &,
     .variant--pink & {
-      color: var(--color-white);
+      color: $white;
     }
-  }
-
-  &__link {
-    margin: 3rem 0 2.5rem;
   }
 
   &__button {
     border: 0;
+    border-bottom: 1px solid transparent;
+    float: none;
+    margin-right: 15px;
 
     .variant--light-blue & {
-      color: var(--color-blue);
+      background-color: $white;
+      color: $blue;
+
+      &:hover {
+        background-color: $pale-grey;
+        border-bottom-color: $blue;
+        color: $blue;
+      }
     }
 
     .variant--blue & {
-      color: var(--color-theme-color);
+      background-color: $white;
+      color: $dark-blue;
+
+      &:hover {
+        background-color: $pale-grey;
+        border-bottom-color: $dark-blue;
+        color: $dark-blue;
+      }
     }
 
     .variant--pink & {
-      color: var(--color-pink);
+      background-color: $white;
+      color: $pink;
+
+      &:hover {
+        background-color: $pale-grey;
+        border-bottom-color: $pink;
+        color: $pink;
+      }
     }
   }
 
   &__secondary-link {
-    font-size: var(--font-size-md);
-    font-style: italic;
-    margin: 2.5rem 0;
+    color: $pink;
+    float: left;
+    font-size: 16px;
+    margin: 1rem 0;
+    text-transform: uppercase;
 
-    a {
-      color: var(--color-pink);
+    .variant--light-blue &,
+    .variant--blue &,
+    .variant--pink & {
+      color: $white;
+      text-decoration: underline;
 
-      .variant--light-blue &,
-      .variant--blue &,
-      .variant--pink & {
-        color: var(--color-white);
-        text-decoration: underline;
+      &:hover {
+        border: none;
+        color: $white;
       }
     }
   }

@@ -45,6 +45,13 @@ class CampaignBlock extends BaseElement
     private static $icon = 'font-icon-block-banner';
 
     /**
+     * Use custom element holder to enable variants
+     *
+     * @var string
+     */
+    private static $controller_template = 'HandyElementHolder';
+
+    /**
      * @var array
      */
     private static $db = [
@@ -85,7 +92,7 @@ class CampaignBlock extends BaseElement
 
         $fields->dataFieldByName('Image')
             ->setFolderName('CampaignImages')
-            ->setDescription('It is recommended to use an svg file for this upload.');
+            ->setDescription('We recommend to upload a png file.');
 
         $fields->addFieldsToTab(
             'Root.Main',
@@ -115,7 +122,7 @@ class CampaignBlock extends BaseElement
      */
     public function getType(): string
     {
-        return static::$singular_name;
+        return $this->i18n_singular_name();
     }
 
     /**
